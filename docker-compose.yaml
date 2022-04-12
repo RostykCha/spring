@@ -2,11 +2,8 @@ version: '3'
 services:
   java-web-app-server-1:
     restart: on-failure
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
       - "8091:8091"
-  java-web-app-server-2:
-    restart: on-failure
-    build: .
-    ports:
-      - "8092:8091"
