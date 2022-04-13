@@ -1,3 +1,4 @@
+#docker-compose.yml specification: https://docs.docker.com/compose/compose-file/
 version: '3'
 services:
   java-web-app-server-1:
