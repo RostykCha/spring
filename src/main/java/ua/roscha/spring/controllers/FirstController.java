@@ -12,7 +12,7 @@ public class FirstController {
 
     @GetMapping()
     public String mainPage(){
-        return "general/main";
+        return "/general/home";
     }
 
     @GetMapping("/hello")
