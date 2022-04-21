@@ -1,4 +1,4 @@
-name: Test App
+name: Deploy App to EB
 
 on:
   push:
