@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'ua.roscha'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1-roscha-spring-mvc'
 sourceCompatibility = '15'
 
 repositories {

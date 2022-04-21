@@ -1,0 +1,8 @@
+#docker-compose.yml specification: https://docs.docker.com/compose/compose-file/
+version: '3'
+services:
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: gradle build

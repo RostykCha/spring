@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: docker-compose -f docker-compose.yaml up
+      - run: docker-compose -f docker-compose.build.yaml up
 
       - name: Generate deployment package
-        run: zip -r deploy.zip . -x '*.git*'
+        run: zip -r deploy.zip . -x '/app'
 
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v18
