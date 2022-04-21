@@ -24,5 +24,5 @@ jobs:
           environment_name: Dockerspringmvc-env
           existing_bucket_name: elasticbeanstalk-eu-central-1-232026826030
           region: eu-central-1
-          version_label: ${{ github.sha }}
+          version_label: 12345
           deployment_package: deploy.zip
