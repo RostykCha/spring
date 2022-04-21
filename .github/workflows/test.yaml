@@ -10,7 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run : docker-compose -f docker-compose.test.yaml up
-
 #  build:
 #    runs-on: ubuntu-latest
 #    steps:
