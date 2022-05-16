@@ -5,7 +5,21 @@
     <title>Person</title>
 </head>
 <body>
-<p th:text="${person.getName()}"> VALUE </p>
-<p th:text="${person.getId()}"> VALUE </p>
+<p>NAME: </p>
+<p th:text="${person.getName()}">VALUE </p>
+<p>ID: </p>
+<p th:text="${person.getId()}">VALUE </p>
+<p>AGE: </p>
+<p th:text="${person.getAge()}">VALUE </p>
+<p>EMAIL: </p>
+<p th:text="${person.getEmail()}">VALUE </p>
+<br>
+<hr/>
+<a th:href="@{/people/edit/{id}(id=${person.getId()})}">Edit user</a>
+<br>
+<hr/>
+<form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
+<input type="submit" value="Delete">
+</form>
 </body>
 </html>
