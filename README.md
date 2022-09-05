@@ -1,3 +1,8 @@
+Hi All!
+I am Rostik
+I am automation QE engineer 
+I like Java, History, Video Games
+
 # spring-webApplication-mvc
 
 # Docker build app image:
