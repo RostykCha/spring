@@ -1,9 +1,10 @@
+image: docker:20.10.16
+
 before_script:
   - docker info
 
 image: 
   name: "gradle:6.8.2-jdk15"
-  
 variables:
   VERSION: "3"
 
@@ -13,24 +14,28 @@ stages:          # List of stages for jobs, and their order of execution
   - deploy
 
 build-job:       # This job runs in the build stage, which runs first.
+  tags: [GL] 
   stage: build
   script:
     - echo "Building project"
     - gradle build
 
 unit-test-job:   # This job runs in the test stage.
+  tags: [GL]
   stage: test    # It only starts when the job in the build stage completes successfully.
   script:
     - echo "Running First Tests"
     - gradle test
 
 lint-test-job:   # This job also runs in the test stage.
+  tags: [GL]
   stage: test    # It can run at the same time as unit-test-job (in parallel).
   script:
     - echo "Running Second Tests"
     - gradle test
 
 deploy-job:      # This job runs in the deploy stage.
+  tags: [GL]
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
   environment: production
   script:
