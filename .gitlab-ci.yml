@@ -1,10 +1,9 @@
-image: docker:20.10.16
-
 before_script:
   - docker info
 
 image: 
   name: "gradle:6.8.2-jdk15"
+  
 variables:
   VERSION: "3"
 
